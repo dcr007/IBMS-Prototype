@@ -19,6 +19,10 @@ const routes: Routes = [
                 loadChildren: './dashboard/dashboard.module#DashboardModule'
             },
             {
+                path: 'home',
+                loadChildren: './home/home.module#HomeModule'
+            },
+            {
                 path: 'screen1',
                 loadChildren: './screen1/screen1.module#Screen1Module'
             },

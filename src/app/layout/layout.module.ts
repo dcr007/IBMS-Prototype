@@ -30,7 +30,7 @@ import { Screen2Component } from './screen2/screen2.component';
         MatListModule,
         TranslateModule
     ],
-    declarations: [Screen2Component, LayoutComponent, NavComponent, TopnavComponent, SidebarComponent, ]
+    declarations: [Screen2Component, LayoutComponent, NavComponent, TopnavComponent, SidebarComponent ]
 
 })
 export class LayoutModule { }

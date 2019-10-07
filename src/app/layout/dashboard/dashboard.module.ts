@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatButtonModule, MatCardModule, MatIconModule, MatTableModule } from '@angular/material';
 import { MatGridListModule } from '@angular/material/grid-list';
 
@@ -19,6 +20,7 @@ import { DashboardComponent } from './dashboard.component';
         MatTableModule,
         MatButtonModule,
         MatIconModule,
+        MatPaginatorModule,
         FlexLayoutModule.withConfig({addFlexToParent: false})
     ],
     declarations: [DashboardComponent]

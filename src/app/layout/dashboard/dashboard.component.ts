@@ -2,20 +2,32 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
 
 export interface PeriodicElement {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
+    // name: string;
+    // position: number;
+    // weight: number;
+    // symbol: string;
+    rfpName: string;
+    rfpID: number;
+    due: string;
+    customer: string;
+    lead: string;
+    value: number;
+    status: string ;
 }
 
+
 const ELEMENT_DATA: PeriodicElement[] = [
-    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' }
+    // tslint:disable-next-line:max-line-length
+    { rfpName: 'SAP Hana Implementation for Google', rfpID: 8988, due: '2019-12-11', customer: 'Google' , lead: 'George Ford', value: 3000000, status: 'PENDING' },
+    // tslint:disable-next-line:max-line-length
+    { rfpName: 'Bid Data design for IBM', rfpID: 2341, due: '2019-12-11', customer: 'IBM' , lead: 'Robin Hood', value: 9000000, status: 'PENDING' },
+    // tslint:disable-next-line:max-line-length
+    { rfpName: 'Hadoop Testing  for SAP', rfpID: 1278, due: '2019-12-11', customer: 'SAP' , lead: 'Abitab Bachan', value: 7000000, status: 'PENDING' },
+    // tslint:disable-next-line:max-line-length
+    { rfpName: 'B2B Design for JP Morgan', rfpID: 3456, due: '2019-12-11', customer: 'Chase Bank' , lead: 'Abdul Kalam', value: 5000000, status: 'ACTIVE' },
+    // tslint:disable-next-line:max-line-length
+    { rfpName: 'Java Training for NIIT Inc', rfpID: 6781, due: '2019-12-11', customer: 'NIIT' , lead: 'Rajini Kanth', value: 2000000, status: 'ACTIVE' },
+    // tslint:disable-next-line:max-line-length
 ];
 
 @Component({
@@ -24,7 +36,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-    displayedColumns = ['position', 'name', 'weight', 'symbol'];
+    displayedColumns = ['rfpName', 'rfpID', 'due', 'customer', 'lead', 'value', 'status'];
     dataSource = new MatTableDataSource(ELEMENT_DATA);
     places: Array<any> = [];
 
